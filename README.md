@@ -25,6 +25,8 @@
 - [注意事项](#-注意事项)
 - [常见问题](#-常见问题)
 - [系统界面截图](#-系统界面截图)
+- [支持项目](#-支持项目)
+- [联系方式](#-联系方式)
 - [许可证](#-许可证)
 
 ## 🚀 功能特点
@@ -351,12 +353,12 @@ npm install --legacy-peer-deps
 <details open>
 <summary><b>注册页</b></summary>
 <p align="center">
-  <img src="https://img.msblog.cc/image-20250523002417171.png" alt="注册页第一步" width="80%">
+  <img src="https://img.msblog.cc/image-20250523002417171.png" alt="使用携带邀请码的注册页" width="80%">
   <br>
   <em>使用携带邀请码的注册页</em>
 </p>
 <p align="center">
-  <img src="https://img.msblog.cc/image-20250523002427155.png" alt="注册页第二步" width="80%">
+  <img src="https://img.msblog.cc/image-20250523002427155.png" alt="没有携带邀请码的注册页" width="80%">
   <br>
   <em>没有携带邀请码的注册页</em>
 </p>
@@ -419,6 +421,32 @@ npm install --legacy-peer-deps
   <em>支付设置界面</em>
 </p>
 </details>
+
+## 💖 支持项目
+
+如果您觉得这个项目对您有所帮助，可以请作者喝杯咖啡，以示支持！
+
+<div align="center">
+  <table>
+    <tr>
+      <th align="center" style="width: 50%">
+        <img src="https://img.msblog.cc/image-20250523012804344.png" alt="支付宝" width="70%">
+        <p>支付宝</p>
+      </th>
+      <th align="center" style="width: 50%">
+        <img src="https://img.msblog.cc/image-20250523012814243.png" alt="微信" width="70%">
+        <p>微信</p>
+      </th>
+    </tr>
+  </table>
+</div>
+
+## 📞 联系方式
+
+如有问题或建议，欢迎通过以下方式联系我（请注明来意）：
+
+- **QQ**: 1098901025
+- **微信**: zhx_ms
 
 ## 📄 许可证
 
