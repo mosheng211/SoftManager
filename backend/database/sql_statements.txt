@@ -1,0 +1,52 @@
+-- 如果迁移失败，可以使用以下SQL语句手动添加套餐价格设置到settings表中
+
+-- 添加月卡价格设置
+INSERT INTO settings (key, value, created_at, updated_at) 
+VALUES ('monthly_plan_price', '39.9', NOW(), NOW());
+
+-- 添加季卡价格设置
+INSERT INTO settings (key, value, created_at, updated_at) 
+VALUES ('quarterly_plan_price', '99.9', NOW(), NOW());
+
+-- 添加年卡价格设置
+INSERT INTO settings (key, value, created_at, updated_at) 
+VALUES ('yearly_plan_price', '299.9', NOW(), NOW());
+
+-- 注意：如果设置已存在，可以使用以下SQL语句进行更新
+-- UPDATE settings SET value = '39.9' WHERE key = 'monthly_plan_price';
+-- UPDATE settings SET value = '99.9' WHERE key = 'quarterly_plan_price';
+-- UPDATE settings SET value = '299.9' WHERE key = 'yearly_plan_price';
+
+-- 创建支付方式表
+CREATE TABLE payment_methods (
+    id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) COMMENT '支付方式名称',
+    code VARCHAR(20) UNIQUE COMMENT '支付方式代码',
+    description TEXT NULL COMMENT '描述',
+    is_enabled TINYINT(1) NOT NULL DEFAULT 0 COMMENT '是否启用',
+    sort_order INT NOT NULL DEFAULT 0 COMMENT '排序',
+    created_at TIMESTAMP NULL,
+    updated_at TIMESTAMP NULL
+);
+
+-- 添加默认支付方式
+INSERT INTO payment_methods (name, code, description, is_enabled, sort_order, created_at, updated_at) 
+VALUES 
+('支付宝', 'alipay', '使用支付宝支付', 1, 1, NOW(), NOW()),
+('微信支付', 'wxpay', '使用微信支付', 0, 2, NOW(), NOW()),
+('QQ钱包', 'qqpay', '使用QQ钱包支付', 0, 3, NOW(), NOW()),
+('网银支付', 'bank', '使用网银支付', 0, 4, NOW(), NOW()),
+('京东支付', 'jdpay', '使用京东支付', 0, 5, NOW(), NOW()),
+('PayPal', 'paypal', '使用PayPal支付', 0, 6, NOW(), NOW());
+
+-- 添加支付网关配置到settings表
+INSERT INTO settings (key, value, created_at, updated_at) 
+VALUES 
+('payment_gateway_url', 'https://pay.msblog.cc/submit.php', NOW(), NOW()),
+('payment_merchant_id', '1000', NOW(), NOW()),
+('payment_merchant_key', '', NOW(), NOW());
+
+-- 如果表已存在，可以使用以下SQL语句来更新settings表中的值
+-- UPDATE settings SET value = 'https://pay.msblog.cc/submit.php' WHERE key = 'payment_gateway_url';
+-- UPDATE settings SET value = '1000' WHERE key = 'payment_merchant_id';
+-- UPDATE settings SET value = '' WHERE key = 'payment_merchant_key'; 
