@@ -6,14 +6,14 @@
 
 ```bash
 # 设置Git用户信息
-git config --global user.name "你的GitHub用户名"
-git config --global user.email "你的GitHub邮箱"
+git config --global user.name "mosheng211"
+git config --global user.email "1098901025@qq.com"
 
 # 初始化Git仓库（如果项目尚未初始化）
 git init
 
 # 添加远程仓库（如果尚未添加）
-git remote add origin https://github.com/你的用户名/软件管理系统.git
+git remote add origin https://github.com/mosheng211/SoftManager.git
 ```
 
 ## 日常提交流程
@@ -55,7 +55,7 @@ git add .
 git commit
 
 # 完成后推送
-git push origin main
+git push origin master
 ```
 
 ### 查看提交历史
