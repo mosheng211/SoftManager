@@ -422,6 +422,15 @@ npm install --legacy-peer-deps
 </p>
 </details>
 
+<details>
+<summary><b>支付测试</b></summary>
+<p align="center">
+  <img src="https://img.msblog.cc/SoftManager支付测试.gif" alt="SoftManager支付测试" width="80%">
+  <br>
+  <em>支付测试界面</em>
+</p>
+</details>
+
 ## 💖 支持项目
 
 如果您觉得这个项目对您有所帮助，可以请作者喝杯咖啡，以示支持！
